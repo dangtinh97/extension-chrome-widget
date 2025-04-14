@@ -44,11 +44,11 @@
   <div class="widget vocabulary">
     <h3>Word Quiz</h3>
     <div class="vocab-content">
-      <div id="vocab-word">Serendipity</div>
+      <div class="vocab-word-container">
+        <div id="vocab-word">Serendipity</div>
+        <button id="vocab-play">🔊</button>
+      </div>
       <div class="vocab-options">
-<!--        <button id="vocab-option-a" data-option="A">A: May mắn tình cờ</button>-->
-<!--        <button id="vocab-option-b" data-option="B">B: Buồn bã</button>-->
-<!--        <button id="vocab-option-c" data-option="C">C: Hùng biện</button>-->
         <div class="vocab-options-top">
           <button id="vocab-option-a" data-option="A">A: May mắn tình cờ</button>
           <button id="vocab-option-b" data-option="B">B: Buồn bã</button>
@@ -56,9 +56,10 @@
         <button id="vocab-option-c" data-option="C">C: Hùng biện</button>
       </div>
       <div id="vocab-feedback" style="display: none;"></div>
-      <button id="vocab-play">🔊 Play</button>
-      <button id="vocab-save" style="display: none;">💾 Save</button>
-      <button id="vocab-next" style="display: none;">Next</button>
+      <div class="vocab-actions">
+        <button id="vocab-save" style="display: none;">💾 Save</button>
+        <button id="vocab-next" style="display: none;">Next</button>
+      </div>
     </div>
   </div>
   <div class="widget phrase">

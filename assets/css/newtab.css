@@ -214,6 +214,15 @@ body {
 
 .vocab-content {
     margin-top: 12px;
+    width: 100%;
+}
+
+.vocab-word-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 #vocab-word {
@@ -230,6 +239,23 @@ body {
     50% { transform: translateX(3px); }
     75% { transform: translateX(-3px); }
     100% { transform: translateX(0); }
+}
+
+#vocab-play {
+    background: #4fc3f7;
+    border: none;
+    border-radius: 6px;
+    color: #1a1a1a;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+    line-height: 1;
+}
+
+#vocab-play:hover {
+    background: #0288d1;
+    transform: scale(1.05);
 }
 
 .vocab-options {
@@ -280,24 +306,6 @@ body {
     transform: scale(1.05);
 }
 
-#vocab-option-a, #vocab-option-b, #vocab-option-c {
-    background: linear-gradient(135deg, rgba(79, 195, 247, 0.2), rgba(79, 195, 247, 0.1));
-    border: 1px solid rgba(79, 195, 247, 0.3);
-    border-radius: 10px;
-    color: #e0e0e0;
-    padding: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.95em;
-    text-align: left;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-#vocab-option-a:hover, #vocab-option-b:hover, #vocab-option-c:hover {
-    background: linear-gradient(135deg, rgba(79, 195, 247, 0.4), rgba(79, 195, 247, 0.3));
-    transform: scale(1.05);
-}
-
 #vocab-feedback {
     font-size: 1em;
     font-weight: bold;
@@ -319,19 +327,24 @@ body {
     opacity: 1;
 }
 
-#vocab-play, #vocab-save, #vocab-next {
+.vocab-actions {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+#vocab-save, #vocab-next {
     background: #4fc3f7;
     border: none;
     border-radius: 8px;
     color: #1a1a1a;
     padding: 6px 12px;
-    margin: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 0.9em;
 }
 
-#vocab-play:hover, #vocab-save:hover, #vocab-next:hover {
+#vocab-save:hover, #vocab-next:hover {
     background: #0288d1;
     transform: scale(1.05);
 }
