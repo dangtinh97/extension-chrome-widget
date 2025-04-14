@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url('https://picsum.photos/1920/1080') no-repeat center center fixed;
+    /*background: url('https://fastly.picsum.photos/id/1026/1920/1080.jpg?hmac=7AudKXS08yyxQITcjxnFNoUE6rhDRqCujVo0E2KQzI4') no-repeat center center fixed;*/
+    background-size: cover;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container {
+    width: 50%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.95);
+    font-size: 1.1em;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    color: #333;
+}
+
+#searchInput:focus {
+    transform: scale(1.02);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 85%;
+    max-width: 1400px;
+}
+
+.widget {
+    background: rgba(30, 30, 30, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.widget:hover {
+    transform: translateY(-5px);
+}
+
+/* Clock Styles */
+.clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px; /* Larger padding */
+}
+
+.clock-time {
+    font-size: 5em; /* Larger font size */
+    font-weight: 700;
+    color: #4fc3f7;
+    letter-spacing: 3px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+#date {
+    font-size: 1.8em; /* Larger font size */
+    margin-top: 15px;
+    color: #e0e0e0;
+    letter-spacing: 1.5px;
+}
+
+#lunar-date {
+    font-size: 1.5em; /* Larger font size */
+    color: #b0b0b0;
+    margin-top: 8px;
+}
+
+/* Calendar Styles */
+.calendar {
+    font-size: 1em;
+}
+
+#calendar {
+    margin-top: 15px;
+}
+
+#calendar h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #4fc3f7;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.calendar-grid div {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.calendar-day {
+    color: #e0e0e0;
+    font-size: 0.9em;
+}
+
+.calendar-date {
+    background: rgba(255, 255, 255, 0.15);
+    color: #e0e0e0;
+}
+
+.calendar-date.today {
+    background: #4fc3f7;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+.calendar-date.empty {
+    background: none;
+}
+
+/* Todo Styles */
+.todo {
+    display: flex;
+    flex-direction: column;
+}
+
+#todoInput {
+    margin: 15px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    font-size: 1em;
+    outline: none;
+    color: #333;
+}
+
+#todoList {
+    list-style: none;
+    padding: 0;
+}
+
+#todoList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    margin: 5px 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 1em;
+    color: #e0e0e0;
+}
+
+#todoList li button {
+    background: #ff5252;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#todoList li button:hover {
+    background: #d32f2f;
+}
+
+
+/* Video Widget Styles */
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.video-container {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
