@@ -235,9 +235,49 @@ body {
 .vocab-options {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin: 12px 0;
+    gap: 12px;
+    margin: 10px 0;
     width: 100%;
+}
+
+.vocab-options-top {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+}
+
+#vocab-option-a, #vocab-option-b {
+    flex: 1;
+    background: linear-gradient(135deg, rgba(79, 195, 247, 0.2), rgba(79, 195, 247, 0.1));
+    border: 1px solid rgba(79, 195, 247, 0.3);
+    border-radius: 10px;
+    color: #e0e0e0;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#vocab-option-c {
+    background: linear-gradient(135deg, rgba(79, 195, 247, 0.2), rgba(79, 195, 247, 0.1));
+    border: 1px solid rgba(79, 195, 247, 0.3);
+    border-radius: 10px;
+    color: #e0e0e0;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+#vocab-option-a:hover, #vocab-option-b:hover, #vocab-option-c:hover {
+    background: linear-gradient(135deg, rgba(79, 195, 247, 0.4), rgba(79, 195, 247, 0.3));
+    transform: scale(1.05);
 }
 
 #vocab-option-a, #vocab-option-b, #vocab-option-c {
