@@ -3,7 +3,6 @@ body {
     padding: 0;
     height: 100vh;
     background: url('https://picsum.photos/1920/1080') no-repeat center center fixed;
-    /*background: url('https://fastly.picsum.photos/id/1026/1920/1080.jpg?hmac=7AudKXS08yyxQITcjxnFNoUE6rhDRqCujVo0E2KQzI4') no-repeat center center fixed;*/
     background-size: cover;
     color: #f0f0f0;
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -39,15 +38,16 @@ body {
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
     gap: 20px;
     width: 85%;
-    max-width: 1400px;
+    max-width: 1200px;
 }
 
 .widget {
     background: rgba(30, 30, 30, 0.85);
     backdrop-filter: blur(12px);
-    padding: 25px;
+    padding: 20px;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -63,11 +63,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px; /* Larger padding */
+    padding: 30px;
 }
 
 .clock-time {
-    font-size: 5em; /* Larger font size */
+    font-size: 4em;
     font-weight: 700;
     color: #4fc3f7;
     letter-spacing: 3px;
@@ -75,48 +75,48 @@ body {
 }
 
 #date {
-    font-size: 1.8em; /* Larger font size */
-    margin-top: 15px;
+    font-size: 1.5em;
+    margin-top: 10px;
     color: #e0e0e0;
     letter-spacing: 1.5px;
 }
 
 #lunar-date {
-    font-size: 1.5em; /* Larger font size */
+    font-size: 1.2em;
     color: #b0b0b0;
     margin-top: 8px;
 }
 
 /* Calendar Styles */
 .calendar {
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 #calendar {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 #calendar h3 {
-    margin: 0 0 10px;
-    font-size: 1.5em;
+    margin: 0 0 8px;
+    font-size: 1.4em;
     color: #4fc3f7;
 }
 
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
+    gap: 4px;
     text-align: center;
 }
 
 .calendar-grid div {
-    padding: 8px;
+    padding: 6px;
     border-radius: 5px;
 }
 
 .calendar-day {
     color: #e0e0e0;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 .calendar-date {
@@ -141,12 +141,12 @@ body {
 }
 
 #todoInput {
-    margin: 15px 0;
-    padding: 10px;
+    margin: 10px 0;
+    padding: 8px;
     border: none;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.95);
-    font-size: 1em;
+    font-size: 0.9em;
     outline: none;
     color: #333;
 }
@@ -160,11 +160,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px;
-    margin: 5px 0;
+    padding: 6px;
+    margin: 4px 0;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    font-size: 1em;
+    font-size: 0.9em;
     color: #e0e0e0;
 }
 
@@ -173,7 +173,7 @@ body {
     border: none;
     border-radius: 5px;
     color: #fff;
-    padding: 5px 10px;
+    padding: 4px 8px;
     cursor: pointer;
     transition: background 0.3s;
 }
@@ -182,18 +182,17 @@ body {
     background: #d32f2f;
 }
 
-
 /* Video Widget Styles */
 .video {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 25px;
+    padding: 20px;
 }
 
 .video-container {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
@@ -204,4 +203,140 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Vocabulary Widget Styles */
+.vocabulary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vocab-content {
+    margin-top: 12px;
+}
+
+#vocab-word {
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #4fc3f7;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+
+.vocab-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 12px 0;
+    width: 100%;
+}
+
+#vocab-option-a, #vocab-option-b, #vocab-option-c {
+    background: linear-gradient(135deg, rgba(79, 195, 247, 0.2), rgba(79, 195, 247, 0.1));
+    border: 1px solid rgba(79, 195, 247, 0.3);
+    border-radius: 10px;
+    color: #e0e0e0;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#vocab-option-a:hover, #vocab-option-b:hover, #vocab-option-c:hover {
+    background: linear-gradient(135deg, rgba(79, 195, 247, 0.4), rgba(79, 195, 247, 0.3));
+    transform: scale(1.05);
+}
+
+#vocab-feedback {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#vocab-feedback.correct {
+    color: #00e676;
+    opacity: 1;
+}
+
+#vocab-feedback.wrong {
+    color: #ff3d00;
+    opacity: 1;
+}
+
+#vocab-play, #vocab-save, #vocab-next {
+    background: #4fc3f7;
+    border: none;
+    border-radius: 8px;
+    color: #1a1a1a;
+    padding: 6px 12px;
+    margin: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+}
+
+#vocab-play:hover, #vocab-save:hover, #vocab-next:hover {
+    background: #0288d1;
+    transform: scale(1.05);
+}
+
+/* Phrase Widget Styles */
+.phrase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.phrase-content {
+    margin-top: 10px;
+}
+
+#phrase-text {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #4fc3f7;
+}
+
+#phrase-meaning {
+    font-size: 1.1em;
+    color: #e0e0e0;
+    margin: 4px 0;
+}
+
+#phrase-context {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #d0d0d0;
+}
+
+#phrase-play, #phrase-save {
+    background: #4fc3f7;
+    border: none;
+    border-radius: 8px;
+    color: #1a1a1a;
+    padding: 6px 12px;
+    margin: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 0.9em;
+}
+
+#phrase-play:hover, #phrase-save:hover {
+    background: #0288d1;
 }
